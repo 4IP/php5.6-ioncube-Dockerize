@@ -1,0 +1,20 @@
+version: '3.7'
+services:
+   e-masyia:
+     build:
+        context: .
+        dockerfile: Dockerfile
+     image: e-masyia
+     container_name: e-masyia
+     tty: true
+     network_mode: host
+#        - masyia-net
+     volumes:
+        - ./web:/var/www/html/
+          #     ports:
+          #        - 9000:9000
+
+#networks:
+#     masyia-net:
+#             driver: bridge
+
